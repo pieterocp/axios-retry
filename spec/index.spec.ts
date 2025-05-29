@@ -1014,7 +1014,7 @@ describe('isSafeRequestError(error)', () => {
 });
 
 describe('isIdempotentRequestError(error)', () => {
-  ['get', 'head', 'options', 'put', 'delete'].forEach((method) => {
+  ['get', 'head', 'options', 'trace', 'put', 'delete'].forEach((method) => {
     it(`should be true for "${method}" requests with a 5xx response`, () => {
       const errorResponse = new AxiosError('Error response');
       errorResponse.config = { method } as AxiosError['config'];

@@ -108,7 +108,7 @@ export function isNetworkError(error) {
   return isRetryAllowed(error);
 }
 
-const SAFE_HTTP_METHODS = ['get', 'head', 'options'];
+const SAFE_HTTP_METHODS = ['get', 'head', 'options', 'trace'];
 const IDEMPOTENT_HTTP_METHODS = SAFE_HTTP_METHODS.concat(['put', 'delete']);
 
 export function isRetryableError(error: AxiosError): boolean {
